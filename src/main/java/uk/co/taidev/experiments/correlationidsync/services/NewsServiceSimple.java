@@ -11,8 +11,8 @@ public class NewsServiceSimple implements NewsService {
 
     @Override
     public String getNews() {
-        //you probably wouldn't pollute service code with correlation Ids (only external calls)
-        //but it is included here as an example
+        //you probably wouldn't pollute service code with correlation Ids (instead only include them
+        //when making external calls), but it is included here as an example of how to retrieve ids
         return String.format("No news is good news (with correlation Id '%s')", RequestCorrelation.getId());
     }
 

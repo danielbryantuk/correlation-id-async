@@ -21,7 +21,7 @@ public class Application {
 
 
     @Bean
-    public FilterRegistrationBean authorizationFilter() {
+    public FilterRegistrationBean correlationHeaderFilter() {
         FilterRegistrationBean filterRegBean = new FilterRegistrationBean();
         filterRegBean.setFilter(new CorrelationHeaderFilter());
         filterRegBean.setUrlPatterns(Arrays.asList("/*"));

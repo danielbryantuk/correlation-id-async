@@ -19,7 +19,7 @@ public class ExternalNewsServiceRest implements ExternalNewsService {
 
     @Override
     public String getNews() {
-        //in production better error-handling and fault-tolerance would be required here
+        //TODO: error-handling and fault-tolerance would be required here in production code
         return restClient.getForString(NEWS_LOCATION);
     }
 }
