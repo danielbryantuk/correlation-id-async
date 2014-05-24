@@ -25,6 +25,8 @@ public class NewsController {
     @Autowired
     private NewsService newsService;
 
+
+    //TODO: This should be extracted/encapsulated away from the Controller for production apps
     private ListeningExecutorService service = MoreExecutors.listeningDecorator(Executors.newFixedThreadPool(10));
 
 
@@ -35,8 +37,8 @@ public class NewsController {
 
 
     @RequestMapping("news")
-    public String news() {
-        return newsService.getNews();
+    public DeferredResult<String> news() {
+        return new ListenableFutureAdapter<>(service.submit(new CorrelationCallable<>(newsService::getNews)));
     }
 
 }
