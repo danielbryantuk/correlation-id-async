@@ -1,7 +1,7 @@
-package uk.co.taidev.experiments.correlationidsync.services;
+package uk.co.taidev.experiments.correlationidasync.services;
 
 import org.springframework.stereotype.Service;
-import uk.co.taidev.experiments.correlationidsync.reporting.RequestCorrelation;
+import uk.co.taidev.experiments.correlationidasync.reporting.RequestCorrelation;
 
 /**
  * NewsServiceSimple

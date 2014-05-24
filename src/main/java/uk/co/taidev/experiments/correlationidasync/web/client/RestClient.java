@@ -1,4 +1,4 @@
-package uk.co.taidev.experiments.correlationidsync.web.client;
+package uk.co.taidev.experiments.correlationidasync.web.client;
 
 /**
  * RestClient

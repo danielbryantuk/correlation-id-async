@@ -1,4 +1,4 @@
-package uk.co.taidev.experiments.correlationidsync.services;
+package uk.co.taidev.experiments.correlationidasync.services;
 
 /**
  * NewsService

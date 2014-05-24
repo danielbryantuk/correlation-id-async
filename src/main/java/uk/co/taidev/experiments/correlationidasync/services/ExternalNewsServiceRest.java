@@ -1,8 +1,8 @@
-package uk.co.taidev.experiments.correlationidsync.services;
+package uk.co.taidev.experiments.correlationidasync.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import uk.co.taidev.experiments.correlationidsync.web.client.RestClient;
+import uk.co.taidev.experiments.correlationidasync.web.client.RestClient;
 
 /**
  * ExternalNewsServiceRest

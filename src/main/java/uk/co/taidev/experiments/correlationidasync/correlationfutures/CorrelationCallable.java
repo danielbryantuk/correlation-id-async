@@ -1,6 +1,6 @@
-package uk.co.taidev.experiments.correlationidsync.correlationfutures;
+package uk.co.taidev.experiments.correlationidasync.correlationfutures;
 
-import uk.co.taidev.experiments.correlationidsync.reporting.RequestCorrelation;
+import uk.co.taidev.experiments.correlationidasync.reporting.RequestCorrelation;
 
 import java.util.concurrent.Callable;
 

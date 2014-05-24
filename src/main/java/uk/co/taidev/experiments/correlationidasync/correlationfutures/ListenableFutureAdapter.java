@@ -1,4 +1,4 @@
-package uk.co.taidev.experiments.correlationidsync.correlationfutures;
+package uk.co.taidev.experiments.correlationidasync.correlationfutures;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

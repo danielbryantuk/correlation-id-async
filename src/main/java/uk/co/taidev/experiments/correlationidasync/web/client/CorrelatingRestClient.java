@@ -1,4 +1,4 @@
-package uk.co.taidev.experiments.correlationidsync.web.client;
+package uk.co.taidev.experiments.correlationidasync.web.client;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +8,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-import uk.co.taidev.experiments.correlationidsync.reporting.RequestCorrelation;
+import uk.co.taidev.experiments.correlationidasync.reporting.RequestCorrelation;
 
 /**
  * CorrelatingRestClient

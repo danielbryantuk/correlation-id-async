@@ -1,8 +1,8 @@
-package uk.co.taidev.experiments.correlationidsync.web.filters;
+package uk.co.taidev.experiments.correlationidasync.web.filters;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.co.taidev.experiments.correlationidsync.reporting.RequestCorrelation;
+import uk.co.taidev.experiments.correlationidasync.reporting.RequestCorrelation;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

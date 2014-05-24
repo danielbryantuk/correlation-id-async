@@ -29,7 +29,7 @@
     </dependencies>
 
     <properties>
-        <start-class>uk.co.taidev.experiments.correlationidsync.Application</start-class>
+        <start-class>uk.co.taidev.experiments.correlationidasync.Application</start-class>
         <java.version>1.8</java.version>
     </properties>
 

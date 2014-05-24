@@ -1,4 +1,4 @@
-package uk.co.taidev.experiments.correlationidsync.controllers;
+package uk.co.taidev.experiments.correlationidasync.controllers;
 
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;
@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.async.DeferredResult;
-import uk.co.taidev.experiments.correlationidsync.correlationfutures.CorrelationCallable;
-import uk.co.taidev.experiments.correlationidsync.correlationfutures.ListenableFutureAdapter;
-import uk.co.taidev.experiments.correlationidsync.services.ExternalNewsService;
-import uk.co.taidev.experiments.correlationidsync.services.NewsService;
+import uk.co.taidev.experiments.correlationidasync.correlationfutures.CorrelationCallable;
+import uk.co.taidev.experiments.correlationidasync.correlationfutures.ListenableFutureAdapter;
+import uk.co.taidev.experiments.correlationidasync.services.ExternalNewsService;
+import uk.co.taidev.experiments.correlationidasync.services.NewsService;
 
 import java.util.concurrent.Executors;
 
