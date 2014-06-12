@@ -2,6 +2,7 @@ package uk.co.taidev.experiments.correlationidasync.web.client;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -18,20 +19,22 @@ public class CorrelatingRestClient implements RestClient {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CorrelatingRestClient.class);
 
-    private RestTemplate restTemplate = new RestTemplate();
+	private RestTemplate restTemplate;
 
+	@Autowired
+	public CorrelatingRestClient( RestTemplate restTemplate) {
+		this.restTemplate = restTemplate;
+	}
 
-    @Override
+	@Override
     public String getForString(String uri) {
         String correlationId = RequestCorrelation.getId();
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.set(RequestCorrelation.CORRELATION_ID_HEADER, correlationId);
 
         LOGGER.info("start REST request to {} with correlationId {}", uri, correlationId);
 
         //TODO: error-handling and fault-tolerance in production
         ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET,
-                new HttpEntity<String>(httpHeaders), String.class);
+                new HttpEntity<String>(new HttpHeaders()), String.class);
 
         LOGGER.info("completed REST request to {} with correlationId {}", uri, correlationId);
 
