@@ -5,6 +5,9 @@ import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import org.springframework.web.context.request.async.DeferredResult;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
 /**
  * ListenableFutureAdapter
  */
@@ -21,6 +24,6 @@ public class ListenableFutureAdapter<T> extends DeferredResult<String> {
             public void onFailure(Throwable t) {
                 setErrorResult(t);
             }
-        });
+        }, Executors.newSingleThreadExecutor());
     }
 }
